@@ -2,18 +2,13 @@
   box-sizing: border-box;
 }
 body {
-  background: #f8f4ed;
-  color: #2c1e17;
+  background: #f8f4ed; /* тёплый светло-бежевый */
+  color: #2c1e17; /* глубокий тёмно-коричневый */
   font-family: 'Fira Code', 'Courier New', monospace;
   line-height: 1.6;
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
-}
-
-p {
-  margin: 12px 0;
-  font-weight: 500; /* теперь это настоящий medium, а не fake bold */
 }
 h1 {
   text-align: center;
@@ -22,19 +17,36 @@ h1 {
   font-size: 1.8em;
   font-weight: 600;
 }
-.stage, .fragments-container, .final-success {
-  background: #f0e6da; /* тёплый бежевый, но достаточно контрастный */
+
+/* Основные блоки этапов */
+.stage {
+  background: #f0e6da; /* тёплый, но контрастный */
   padding: 20px;
   margin: 25px 0;
-  border-left: 4px solid #8d1b2e;
+  border-left: 4px solid #8d1b2e; /* бордовая рамка */
   border-radius: 0 8px 8px 0;
 }
 
-.fragments-container, .final-success {
-  background: #e6dcd2; /* ещё чуть темнее для акцента */
-  border-left: 4px solid #a52a2a;
+/* Финальный блок с фрагментами — ЗЕЛЁНЫЙ */
+.fragments-container {
+  background: #e8f5e9 !important; /* светло-зелёный */
+  padding: 20px;
+  margin: 25px 0;
+  border-left: 4px solid #4caf50 !important; /* зелёная рамка */
+  border-radius: 0 8px 8px 0;
   text-align: center;
 }
+
+/* Поздравление — ЗЕЛЁНЫЙ */
+.final-success {
+  background: #c8e6c9 !important; /* мягкий зелёный */
+  padding: 25px;
+  margin: 30px 0;
+  border-left: 4px solid #2e7d32 !important; /* тёмно-зелёная рамка */
+  border-radius: 0 8px 8px 0;
+  text-align: center;
+}
+
 .hidden {
   display: none !important;
 }
@@ -47,16 +59,19 @@ h1 {
   font-size: 1.2em;
 }
 
+/* Обычный текст — чуть плотнее */
 p {
   margin: 12px 0;
-  font-weight: 400; /* обычный вес */
+  font-weight: 500; /* medium weight (работает благодаря Fira Code) */
 }
 
+/* Акценты */
 strong {
   color: #8d1b2e; /* бордовый */
-  font-weight: 700; /* жирный */
+  font-weight: 700;
 }
 
+/* Поля ввода и кнопки */
 input, button {
   background: #fdf9f3;
   color: #2c1e17;
@@ -68,44 +83,46 @@ input, button {
   font-size: 1em;
   border-radius: 4px;
 }
+
 button {
-  background: #d7ccc8; /* тёмно-бежевый, мягкий, но контрастный */
-  color: #2c1e17;
-  border: 1px solid #8d1b2e;
-  padding: 10px;
-  margin: 12px 0;
-  width: 100%;
-  font-family: inherit;
-  font-size: 1em;
-  border-radius: 4px;
+  background: #d7ccc8; /* темнее, чем раньше */
   cursor: pointer;
   transition: background 0.2s;
 }
 
 button:hover {
-  background: #cfd8dc; /* чуть светлее при наведении */
+  background: #cfd8dc;
 }
+
+/* Обратная связь */
 .feedback {
   min-height: 24px;
   margin-top: 8px;
 }
+
 .success {
   color: #2e7d32;
   font-weight: bold;
 }
+
 .error {
   color: #c62828;
   font-weight: bold;
 }
+
+/* Список фрагментов — зелёный текст */
 .fragments-list {
   font-size: 1.3em;
   letter-spacing: 4px;
   margin: 10px 0;
-  color: #5d2a23;
+  color: #2e7d32; /* тёмно-зелёный */
 }
+
 .final-input {
   margin-top: 20px;
 }
+
+/* Код */
 pre {
   background: #f0e6da;
   padding: 12px;
@@ -114,6 +131,8 @@ pre {
   color: #2c1e17;
   border: 1px solid #d7ccc8;
 }
+
+/* Кнопка подсказки */
 .hint-btn {
   background: #d7ccc8;
   border: 1px solid #8d1b2e;
@@ -128,6 +147,7 @@ pre {
 .hint-btn:hover {
   background: #cfd8dc;
 }
+
 .hint-content {
   background: #f0e6da;
   padding: 12px;
@@ -136,6 +156,7 @@ pre {
   color: #2c1e17;
   border: 1px solid #d7ccc8;
 }
+
 /* Снег */
 #snow-container {
   position: fixed;
@@ -149,9 +170,9 @@ pre {
 
 .snowflake {
   position: absolute;
-  background: #a3b1c6; /* холодный серо-голубой */
+  background: #a3b1c6; /* видимый зимний цвет */
   border-radius: 50%;
-  opacity: 0.85; /* чуть выше прозрачность */
+  opacity: 0.85;
   user-select: none;
-  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+  box-shadow: 0 0 1px rgba(0,0,0,0.1);
 }
