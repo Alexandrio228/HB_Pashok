@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #f8f4ed;
+  color: #2c1e17;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 12px 0;
+  font-weight: 500; /* теперь это настоящий medium, а не fake bold */
+}
+h1 {
+  text-align: center;
+  color: #8d1b2e; /* бордовый */
+  margin: 20px 0;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+.stage, .fragments-container, .final-success {
+  background: #f0e6da; /* тёплый бежевый, но достаточно контрастный */
+  padding: 20px;
+  margin: 25px 0;
+  border-left: 4px solid #8d1b2e;
+  border-radius: 0 8px 8px 0;
+}
+
+.fragments-container, .final-success {
+  background: #e6dcd2; /* ещё чуть темнее для акцента */
+  border-left: 4px solid #a52a2a;
+  text-align: center;
+}
+.hidden {
+  display: none !important;
+}
+
+/* Заголовки этапов: "📍 Этап 1: ..." */
+.stage > div:first-child {
+  color: #5d2a23; /* тёмно-бордовый */
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 1.2em;
+}
+
+p {
+  margin: 12px 0;
+  font-weight: 400; /* обычный вес */
+}
+
+strong {
+  color: #8d1b2e; /* бордовый */
+  font-weight: 700; /* жирный */
+}
+
+input, button {
+  background: #fdf9f3;
+  color: #2c1e17;
+  border: 1px solid #8d1b2e;
+  padding: 10px;
+  margin: 12px 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: 4px;
+}
+button {
+  background: #d7ccc8; /* тёмно-бежевый, мягкий, но контрастный */
+  color: #2c1e17;
+  border: 1px solid #8d1b2e;
+  padding: 10px;
+  margin: 12px 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #cfd8dc; /* чуть светлее при наведении */
+}
+.feedback {
+  min-height: 24px;
+  margin-top: 8px;
+}
+.success {
+  color: #2e7d32;
+  font-weight: bold;
+}
+.error {
+  color: #c62828;
+  font-weight: bold;
+}
+.fragments-list {
+  font-size: 1.3em;
+  letter-spacing: 4px;
+  margin: 10px 0;
+  color: #5d2a23;
+}
+.final-input {
+  margin-top: 20px;
+}
+pre {
+  background: #f0e6da;
+  padding: 12px;
+  border-radius: 4px;
+  overflow-x: auto;
+  color: #2c1e17;
+  border: 1px solid #d7ccc8;
+}
+.hint-btn {
+  background: #d7ccc8;
+  border: 1px solid #8d1b2e;
+  color: #2c1e17;
+  padding: 6px 12px;
+  font-size: 0.9em;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.hint-btn:hover {
+  background: #cfd8dc;
+}
+.hint-content {
+  background: #f0e6da;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 10px 0;
+  color: #2c1e17;
+  border: 1px solid #d7ccc8;
+}
+/* Снег */
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.snowflake {
+  position: absolute;
+  background: #a3b1c6; /* холодный серо-голубой */
+  border-radius: 50%;
+  opacity: 0.85; /* чуть выше прозрачность */
+  user-select: none;
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
