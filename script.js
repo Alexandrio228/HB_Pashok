@@ -172,3 +172,13 @@ function createSnow() {
 
 // Запускаем снег при загрузке
 document.addEventListener('DOMContentLoaded', createSnow);
+// Отправка по Enter для всех полей ввода
+document.querySelectorAll('input').forEach(input => {
+  input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      // Найдём кнопку "Отправить" в том же блоке
+      const btn = e.target.closest('.stage, #finalStage').querySelector('button:not(.hint-btn):not(.next-btn)');
+      if (btn) btn.click();
+    }
+  });
+});
